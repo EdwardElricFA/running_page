@@ -82,25 +82,10 @@ jobs:
             ${{ env.DATA_CACHE_PREFIX }}-${{ github.sha }}-
             ${{ env.DATA_CACHE_PREFIX }}-
 
-      - name: Run sync Nike script
-        if: env.RUN_TYPE == 'nike'
-        run: |
-          python run_page/nike_sync.py ${{ secrets.NIKE_REFRESH_TOKEN }}
-
-      - name: Run sync Nike to Strava(Run with nike data backup and show with strava)
-        if: env.RUN_TYPE == 'nike_to_strava'
-        run: |
-          python run_page/nike_to_strava_sync.py ${{ secrets.NIKE_REFRESH_TOKEN }} ${{ secrets.STRAVA_CLIENT_ID }} ${{ secrets.STRAVA_CLIENT_SECRET }} ${{ secrets.STRAVA_CLIENT_REFRESH_TOKEN }}
-
       - name: Run sync Keep script
         if: env.RUN_TYPE == 'keep'
         run: |
           python run_page/keep_sync.py ${{ secrets.KEEP_MOBILE }} ${{ secrets.KEEP_PASSWORD }} --with-gpx
-
-      - name: Run sync Coros script
-        if: env.RUN_TYPE == 'coros'
-        run: |
-          python run_page/coros_sync.py ${{ secrets.COROS_ACCOUNT }} ${{ secrets.COROS_PASSWORD }}
 
       - name: Run sync Keep_to_strava script
         if: env.RUN_TYPE == 'keep_to_strava_sync'
@@ -150,7 +135,6 @@ jobs:
         # If you only want to sync `type running` add args --only-run, default script is to sync all data (rides and runs).
         # python run_page/garmin_sync_cn_global.py ${{ secrets.GARMIN_SECRET_STRING_CN }} ${{ secrets.GARMIN_SECRET_STRING }}  --only-run
 
-
       - name: Run sync Only GPX script
         if: env.RUN_TYPE == 'only_gpx'
         run: |
@@ -185,18 +169,6 @@ jobs:
         if: env.RUN_TYPE == 'garmin_to_strava'
         run: |
           python run_page/garmin_to_strava_sync.py ${{ secrets.STRAVA_CLIENT_ID }} ${{ secrets.STRAVA_CLIENT_SECRET }} ${{ secrets.STRAVA_CLIENT_REFRESH_TOKEN }}  ${{ secrets.GARMIN_EMAIL }} ${{ secrets.GARMIN_PASSWORD }}
-
-      - name: Run sync Tulipsport script
-        if: env.RUN_TYPE == 'tulipsport'
-        run: |
-          python run_page/tulipsport_sync.py ${{ secrets.TULIPSPORT_TOKEN }} --with-gpx
-
-      - name: Run sync Oppo heytap script, note currently this script is not worked
-        if: env.RUN_TYPE == 'oppo'
-        run: |
-            python run_page/oppo_sync.py ${{ secrets.OPPO_ID }} ${{ secrets.OPPO_CLIENT_SECRET }} ${{ secrets.OPPO_CLIENT_REFRESH_TOKEN }} --with-tcx
-        # If you want to sync fit activity in gpx format, please consider the following script:
-        # python run_page/oppo_sync.py ${{ secrets.OPPO_ID }} ${{ secrets.OPPO_CLIENT_SECRET }} ${{ secrets.OPPO_CLIENT_REFRESH_TOKEN }} --with-gpx
 
       - name: Make svg GitHub profile
         if: env.RUN_TYPE != 'pass'
