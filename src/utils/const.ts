@@ -33,7 +33,7 @@ const GOOGLE_ANALYTICS_TRACKING_ID = '';
 // styling: set to `true` if you want dash-line route
 const USE_DASH_LINE = false;
 // styling: route line opacity: [0, 1]
-const LINE_OPACITY = 0.4;
+const LINE_OPACITY = 0.6;
 // styling: map height
 const MAP_HEIGHT = 600;
 //set to `false` if you want to hide the road label characters
@@ -67,6 +67,10 @@ const AFTERNOON_RUN_TITLE = IS_CHINESE ? '午后跑步' : 'Afternoon Run';
 const EVENING_RUN_TITLE = IS_CHINESE ? '傍晚跑步' : 'Evening Run';
 const NIGHT_RUN_TITLE = IS_CHINESE ? '夜晚跑步' : 'Night Run';
 
+const RIDE_TITLE = IS_CHINESE ? '骑行' : 'Ride';
+const HIKE_TITLE = IS_CHINESE ? '徒步' : 'Hike';
+
+
 const RUN_TITLES = {
   FULL_MARATHON_RUN_TITLE,
   HALF_MARATHON_RUN_TITLE,
@@ -75,6 +79,9 @@ const RUN_TITLES = {
   AFTERNOON_RUN_TITLE,
   EVENING_RUN_TITLE,
   NIGHT_RUN_TITLE,
+
+  RIDE_TITLE,
+  HIKE_TITLE,
 };
 
 export {
@@ -107,6 +114,8 @@ const KURENAI = 'rgb(203,27,69)'; //红
 // If your map has an offset please change this line
 // issues #92 and #198
 export const NEED_FIX_MAP = false;
-export const MAIN_COLOR = KURENAI;
+export const MAIN_COLOR = KURENAI; //地图上跑步路线的颜色
 export const PROVINCE_FILL_COLOR = '#47b8e0';
 export const COUNTRY_FILL_COLOR = dark_vanilla;
+export const HIKE_COLOR = nike;
+export const RIDE_COLOR = HANAASAGI;
