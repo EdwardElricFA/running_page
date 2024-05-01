@@ -98,11 +98,7 @@ jobs:
         run: |
           python run_page/strava_sync.py ${{ secrets.STRAVA_CLIENT_ID }} ${{ secrets.STRAVA_CLIENT_SECRET }} ${{ secrets.STRAVA_CLIENT_REFRESH_TOKEN }}
         # If you only want to sync `type running` add args --only-run, default script is to sync all data (rides and runs).
-
-      - name: Run sync Codoon script
-        if: env.RUN_TYPE == 'codoon'
-        run: |
-          python run_page/codoon_sync.py ${{ secrets.CODOON_MOBILE }} ${{ secrets.CODOON_PASSWORD }}
+      
 
       - name: Run sync tcx to Garmin script
         if: env.RUN_TYPE == 'tcx_to_garmin'
