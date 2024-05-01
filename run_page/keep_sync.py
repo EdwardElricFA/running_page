@@ -340,7 +340,7 @@ if __name__ == "__main__":
         "--sync-types",
         dest="sync_types",
         nargs="+",
-        default=["hiking"],
+        default=["mountaineering"],
         help="sync sport types from keep, default is running, you can choose from running, hiking, cycling",
     )
     parser.add_argument(
