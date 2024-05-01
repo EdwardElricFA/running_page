@@ -17,7 +17,7 @@ from generator import Generator
 from utils import adjust_time
 import xml.etree.ElementTree as ET
 
-KEEP_SPORT_TYPES = ["running", "hiking", "cycling","mountaineering"]
+KEEP_SPORT_TYPES = ["running", "hiking", "cycling"]
 KEEP2STRAVA = {
     "outdoorWalking": "Walk",
     "outdoorRunning": "Run",
@@ -340,7 +340,7 @@ if __name__ == "__main__":
         "--sync-types",
         dest="sync_types",
         nargs="+",
-        default=["mountaineering"],
+        default=["running"],
         help="sync sport types from keep, default is running, you can choose from running, hiking, cycling",
     )
     parser.add_argument(
