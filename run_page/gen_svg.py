@@ -105,7 +105,6 @@ def main():
         "--track-color2",
         dest="track_color2",
         metavar="COLOR",
-        default="#FF0000",
         type=str,
         help="Secondary color of tracks (default: none).",
     )
@@ -164,7 +163,7 @@ def main():
         dest="min_distance",
         metavar="DISTANCE",
         type=float,
-        default=0.5,
+        default=1.0,
         help="min distance by km for track filter",
     )
     args_parser.add_argument(
