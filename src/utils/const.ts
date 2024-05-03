@@ -108,13 +108,13 @@ const nike = 'rgb(224,237,94)'; // if you want change the main color change here
 const dark_vanilla = 'rgb(228,212,220)';
 const HANAASAGI = 'rgb(30,136,168)'; // 花浅葱
 const KURENAI = 'rgb(203,27,69)'; //红
-
+const YAMABUKI = 'rgb(255,177, 27)';// 山吹
 
 
 // If your map has an offset please change this line
 // issues #92 and #198
 export const NEED_FIX_MAP = false;
-export const MAIN_COLOR = KURENAI; //地图上跑步路线的颜色
+export const MAIN_COLOR = YAMABUKI; //地图上跑步路线的颜色
 export const PROVINCE_FILL_COLOR = '#47b8e0';
 export const COUNTRY_FILL_COLOR = dark_vanilla;
 export const HIKE_COLOR = nike;
