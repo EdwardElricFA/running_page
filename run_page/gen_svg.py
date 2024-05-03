@@ -98,14 +98,14 @@ def main():
         dest="track_color",
         metavar="COLOR",
         type=str,
-        default="#1E88A8",
+        default="#1E88A8", # 路线默认颜色
         help='Color of tracks (default: "#4DD2FF").',
     )
     args_parser.add_argument(
         "--track-color2",
         dest="track_color2",
         metavar="COLOR",
-        default="#DDD23B",
+        default="#FF0000",
         type=str,
         help="Secondary color of tracks (default: none).",
     )
