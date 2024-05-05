@@ -2,4 +2,5 @@ TOKIWA 		常磐 	rgb(27, 129, 62)
 YAMABUKI 	山吹		rgb(255,177, 27)
 			洗柿		#E79460
 
-style.module.css  rgb(14, 70, 163) 页面字体颜色	
+style.module.css  rgb(14, 70, 163) 页面字体颜色 
+background-color: rgb(26, 26, 26); 页面背景颜色

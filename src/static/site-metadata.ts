@@ -10,7 +10,7 @@ interface ISiteMetadataResult {
 }
 
 const data: ISiteMetadataResult = {
-  siteTitle: 'Edward Running',
+  siteTitle: 'Running Page',
   siteUrl: 'https://yihong.run',
   logo: 'https://github.com/EdwardElricFA/running_page/blob/master/public/images/10001.png?raw=true',
   description: 'Personal site and blog',
